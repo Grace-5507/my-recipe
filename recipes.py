@@ -22,7 +22,7 @@ recipe_model = recipe_ns.model(
 @recipe_ns.route('/recipes')
 class RecipesResource(Resource):
  
- #To turn sqlalchemy object into a json object that can be used iin the front end we use this decorator on the func
+ #To turn sqlalchemy object into a json object that can be used in the front end we use this decorator on the func
 
     @recipe_ns.marshal_list_with(recipe_model)
     def get(self):
